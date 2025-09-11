@@ -1,0 +1,58 @@
+:root {
+  --bg: #0f172a;       /* page background (slate-900) */
+  --panel: #ffffff;    /* card background */
+  --ink: #0b1222;      /* text color */
+  --accent: #0ea5e9;   /* links, highlights */
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color: var(--ink);
+  background: linear-gradient(180deg, #11487e, #ec0707 60%, #f8fafc);
+}
+
+header, main, aside, footer {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+header nav a {
+  margin-right: 12px;
+  color: var(--accent);
+  text-decoration: none;
+}
+header nav a:hover { text-decoration: underline; }
+
+section, aside {
+  background: var(--panel);
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,.05);
+}
+
+/* Box model demo */
+#favorites li {
+  padding: 6px 10px;     /* inside the border */
+  border: 1px solid #0a4322;
+  margin: 6px 0;         /* outside the border */
+}
+
+/* Simple layout tweak */
+header nav { display: inline-flex; gap: 12px; }
+
+/* Button look */
+button {
+  background: var(--accent);
+  color: rgb(223, 22, 22);
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { filter: brightness(0.95); }
